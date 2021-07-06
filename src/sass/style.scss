@@ -1,10 +1,15 @@
-@import "./abstract/variable";
+@import "./abstract/variables";
 @import "./abstract/mixins";
 
 @import "fonts";
 @import "iconsfont";
 
 //Layout
+@import "./base/base";
 @import "./layout/header";
 @import "./layout/about-us";
-@import "./base/base";
+@import "./layout/footer";
+
+//Components
+@import "./components/logo";
+@import "./components/buttons";

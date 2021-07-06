@@ -1,0 +1,31 @@
+.footer{
+    background-color: #E4EBED;
+    padding: 70px 0px;
+    &__content{
+        
+    }
+    &__body{
+        display: grid;
+        grid-template: 54px 1fr / repeat(2, 1fr);
+        justify-items: stretch;
+        align-items: center;
+    }
+    &__logo{
+        align-self: flex-start;
+    }
+    &__copyright{
+
+    }
+    &__contacts{
+        justify-self:end;
+    }
+    &__contact-item{
+
+    }
+    &__links{
+        justify-self:end;
+    }
+    &__link{
+
+    }
+}
