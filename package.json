@@ -1,0 +1,44 @@
+{
+  "name": "yami-yami",
+  "version": "1.0.0",
+  "description": "Natural soft drinks and food products",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deliora90/Yami-Yami.git"
+  },
+  "keywords": [
+    "yami-yami"
+  ],
+  "author": "Sakharova M.A.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deliora90/Yami-Yami/issues"
+  },
+  "homepage": "https://github.com/Deliora90/Yami-Yami#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-fonter": "^0.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-html": "^1.0.2",
+    "gulp-webpcss": "^1.1.1",
+    "webp-converter": "^2.2.3"
+  },
+  "dependencies": {
+    "gulp-sass": "^4.1.0"
+  }
+}
