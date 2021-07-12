@@ -1,0 +1,86 @@
+.about-us {
+    &__content {
+        background: url(../../img/about-us/about-us-background1440x676.png) top/cover no-repeat;
+        @media (max-width: $md3 + px) {
+            background: url(../../img/about-us/about-us-background1086x542.png) top/cover no-repeat;
+        }
+        @media (max-width: $md4 + px) {
+            background: url(../../img/about-us/about-us-background322x526.png) top/cover no-repeat;
+        }
+    }
+    &__body {
+        z-index: 2;
+        display: flex;
+        padding: 101px 0px 0px 0px;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width: $md4 + px) {
+            padding: 50vw 0px 0px 0px;
+        }
+    }
+    &__logo {
+        padding: 0px 0px 42px 0px;
+        @media (max-width: $md3 + px) {
+            padding: 0px 0px 32.04px 0px;
+        }
+        @media (max-width: $md4 + px) {
+            padding: 0px 0px 24px 0px;
+        }
+    }
+    &__title {
+        width: 623px;
+        font-family: "Merriweather";
+        font-weight: normal;
+        color: $dark-grey-color;
+        font-size: 38px;
+        line-height: 150%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        padding: 0px 0px 42px 0px;
+
+        @media (max-width: $md2 + px) {
+            font-size: 36px;
+        }
+        @media (max-width: $md3 + px) {
+            width: 425px;
+            font-size: 32px;
+            padding: 0px 0px 34px 0px;
+        }
+        @media (max-width: $md4 + px) {
+            width: 280px;
+            font-size: 20px;
+            padding: 0px 0px 20.38px 0px;
+        }
+    }
+    &__text {
+        width: 570px;
+        font-family: Roboto;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 150%;
+        color: $grey-color;
+        text-align: center;
+        letter-spacing: -0.02em;
+        padding: 0px 0px 57px 0px;
+
+        @media (max-width: $md3 + px) {
+            width: 487px;
+            font-size: 18px;
+            padding: 0px 0px 44px 0px;
+        }
+        @media (max-width: $md4 + px) {
+            width: 279px;
+            font-size: 15px;
+            padding: 0px 0px 36px 0px;
+        }
+    }
+    &__btn {
+        margin: 0px 0px 178px 0px;
+        @media (max-width: $md3 + px) {
+            margin: 0px 0px 80px 0px;
+        }
+        @media (max-width: $md4 + px) {
+            margin: 0px 0px 55px 0px;
+        }
+    }
+}

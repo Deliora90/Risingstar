@@ -1,31 +1,100 @@
 .footer{
     background-color: #E4EBED;
     padding: 70px 0px;
-    &__content{
-        
+    @media (max-width: $md3 + px) {
+        padding: 50px 0px;
+    }
+    @media (max-width: $md4 + px) {
+        padding: 60px 0px;
     }
     &__body{
         display: grid;
         grid-template: 54px 1fr / repeat(2, 1fr);
         justify-items: stretch;
         align-items: center;
+        @media (max-width: $md3 + px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__logo{
+        order: 1;
         align-self: flex-start;
+        @media (max-width: $md3 + px) {
+            padding-bottom: 26.04px;
+            align-self: center;
+        }
+        @media (max-width: $md4 + px) {
+            padding-bottom: 36.27px;
+        }
     }
     &__copyright{
-
+        order: 3;
+        font-family: 'Roboto';
+        font-weight: normal;
+        font-size: 14px;
+        color: $grey-color;
+        @media (max-width: $md3 + px) {
+            order: 2;
+            padding-bottom: 17px;
+        }
+        @media (max-width: $md4 + px) {
+            font-size: 13px;
+        }
     }
     &__contacts{
+        order: 2;
         justify-self:end;
+        display: inline-flex;
+        align-items: center;
+        font-family: 'Roboto';
+        font-weight: normal;
+        line-height: 20.46px;
+        color: $dark-grey-color;
+        @media (max-width: $md3 + px) {
+            order: 3;
+            justify-self:center;
+            padding-bottom: 54.19px;
+        }
+        @media (max-width: $md4 + px) {
+            padding-bottom: 40.19px;
+        }
     }
-    &__contact-item{
-
+    &__email{
+        font-size: 14px;
+    }
+    &__contact-icon{
+        font-size: 17px;
+        padding-left: 22px;
     }
     &__links{
+        order: 4;
         justify-self:end;
+        @media (max-width: $md3 + px) {
+            order: 4;
+            justify-self:center;
+        }
+        @media (max-width: $md4 + px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__link{
-
+        padding: 0px 22px;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 14px;
+        color: $grey-color;
+        border-right: 0.7px solid $grey-color;
+        &:last-child{
+            padding-right: 0;
+            border-right: none;
+        }
+        @media (max-width: $md4 + px) {
+            padding: 0px;
+            border-right: none;
+        }
     }
 }

@@ -1,15 +1,17 @@
 @import "./abstract/variables";
 @import "./abstract/mixins";
 
-@import "fonts";
+@import "./base/base";
+@import "./base/typography";
+
 @import "iconsfont";
 
 //Layout
-@import "./base/base";
 @import "./layout/header";
+@import "./layout/page";
 @import "./layout/about-us";
+@import "./layout/yes-vitamines";
 @import "./layout/footer";
 
 //Components
-@import "./components/logo";
 @import "./components/buttons";

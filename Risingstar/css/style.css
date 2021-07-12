@@ -1,3 +1,48 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
+  color: #4B667D;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+._container {
+  max-width: 1170px;
+  min-width: 280px;
+  margin: 0 auto;
+}
+
 @font-face {
   font-family: "Merriweather";
   font-display: swap;
@@ -54,6 +99,26 @@
   font-style: normal;
 }
 
+.title-primary {
+  font-family: 'Merriweather';
+  font-size: 36px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -0.02em;
+  color: #363945;
+  line-height: 130%;
+}
+
+.text {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 179.34%;
+  letter-spacing: -0.01em;
+  color: #4B667D;
+}
+
 @font-face {
   font-family: 'icons';
   src: url("../fonts/icons.ttf?gmasup") format("truetype"), url("../fonts/icons.woff?gmasup") format("woff"), url("../fonts/icons.svg?gmasup#icons") format("svg");
@@ -101,51 +166,6 @@
   content: "\e902";
 }
 
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-body {
-  font-family: "Roboto";
-  font-size: 16px;
-  font-weight: 300;
-  color: #4B667D;
-}
-
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-._container {
-  max-width: 1170px;
-  min-width: 280px;
-  margin: 0 auto;
-}
-
 .header {
   margin: 19px 0px;
 }
@@ -191,6 +211,85 @@ body {
   display: none;
 }
 
+.no-webp .about-us__content {
+  background: url(../../img/about-us/about-us-background1440x676.png) top/cover no-repeat; }
+
+.about-us__body {
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 101px 0px 0px 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-us__logo {
+  padding: 0px 0px 42px 0px;
+}
+
+.about-us__title {
+  width: 623px;
+  font-family: "Merriweather";
+  font-weight: normal;
+  color: #363945;
+  font-size: 38px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  padding: 0px 0px 42px 0px;
+}
+
+.about-us__text {
+  width: 570px;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 150%;
+  color: #4B667D;
+  text-align: center;
+  letter-spacing: -0.02em;
+  padding: 0px 0px 57px 0px;
+}
+
+.about-us__btn {
+  margin: 0px 0px 178px 0px;
+}
+
+.yes-vitamines {
+  padding: 88px 0px 110.96px 0px;
+}
+
+.yes-vitamines__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.yes-vitamines__typography {
+  padding: 0px 100px 0px 29.6px;
+}
+
+.yes-vitamines__title {
+  padding: 0px 0px 60px 0px;
+}
+
+.yes-vitamines__text {
+  padding: 0px 0px 30px 0px;
+}
+
+.yes-vitamines__text:last-child {
+  padding: 0;
+}
+
 .footer {
   background-color: #E4EBED;
   padding: 70px 0px;
@@ -206,44 +305,153 @@ body {
 }
 
 .footer__logo {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
+.footer__copyright {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-size: 14px;
+  color: #4B667D;
+}
+
 .footer__contacts {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   justify-self: end;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Roboto';
+  font-weight: normal;
+  line-height: 20.46px;
+  color: #363945;
+}
+
+.footer__email {
+  font-size: 14px;
+}
+
+.footer__contact-icon {
+  font-size: 17px;
+  padding-left: 22px;
 }
 
 .footer__links {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
   justify-self: end;
 }
 
-.logo__img {
-  width: 204px;
-  height: 30.96px;
+.footer__link {
+  padding: 0px 22px;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 14px;
+  color: #4B667D;
+  border-right: 0.7px solid #4B667D;
 }
 
-@media (min-width: 1020px) {
+.footer__link:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+.btn {
+  min-width: 148px;
+  height: 55px;
+  padding: 18px 40px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #25A8E5;
+  color: #FFF;
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 118.75%;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition: background 0.3s ease 0s;
+  -o-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;
+}
+
+@media (min-width: 872.98px) {
+  .btn:hover {
+    background-color: #009FCA;
+  }
+}
+
+@media (min-width: 1024.98px) {
   .menu__item:hover .menu__link > span {
     color: #7bb5d8;
     border-bottom: 2px solid #7bb5d8;
   }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1024.98px) {
   ._container {
     max-width: 940px;
+  }
+
+  .title-primary {
+    font-size: 32px;
   }
 
   .header__logo {
     width: 102px;
     height: 68px;
   }
+
+  .about-us__title {
+    font-size: 36px;
+  }
+
+  .yes-vitamines {
+    padding: 80px 0px 100px 0px;
+  }
+
+  .yes-vitamines__typography {
+    padding: 0px 16px 0px 18.94px;
+  }
+
+  .yes-vitamines__title {
+    padding: 0px 0px 56px 0px;
+  }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 872.98px) {
   ._container {
     max-width: 660px;
+  }
+
+  .title-primary {
+    font-size: 24px;
+  }
+
+  .text {
+    font-size: 15px;
   }
 
   .header__logo {
@@ -339,11 +547,95 @@ body {
   .menu__body._active {
     top: 89px;
   }
+
+  .no-webp .about-us__content {
+    background: url(../../img/about-us/about-us-background1086x542.png) top/cover no-repeat; }
+
+  .about-us__logo {
+    padding: 0px 0px 32.04px 0px;
+  }
+
+  .about-us__title {
+    width: 425px;
+    font-size: 32px;
+    padding: 0px 0px 34px 0px;
+  }
+
+  .about-us__text {
+    width: 487px;
+    font-size: 18px;
+    padding: 0px 0px 44px 0px;
+  }
+
+  .about-us__btn {
+    margin: 0px 0px 80px 0px;
+  }
+
+  .yes-vitamines {
+    padding: 100px 0px 70px 0px;
+  }
+
+  .yes-vitamines__typography {
+    padding: 0px 0px 0px 23.88px;
+  }
+
+  .yes-vitamines__title {
+    padding: 0px 0px 36px 0px;
+  }
+
+  .footer {
+    padding: 50px 0px;
+  }
+
+  .footer__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .footer__logo {
+    padding-bottom: 26.04px;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+
+  .footer__copyright {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-bottom: 17px;
+  }
+
+  .footer__contacts {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    justify-self: center;
+    padding-bottom: 54.19px;
+  }
+
+  .footer__links {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    justify-self: center;
+  }
 }
 
 @media (max-width: 479.98px) {
   ._container {
     max-width: 280px;
+  }
+
+  .title-primary {
+    font-size: 18px;
   }
 
   .header__logo {
@@ -355,8 +647,100 @@ body {
     top: 75px;
   }
 
-  .logo__img {
-    width: 130px;
-    height: 20px;
+  .no-webp .about-us__content {
+    background: url(../../img/about-us/about-us-background322x526.png) top/cover no-repeat; }
+
+  .about-us__body {
+    padding: 50vw 0px 0px 0px;
   }
+
+  .about-us__logo {
+    padding: 0px 0px 24px 0px;
+  }
+
+  .about-us__title {
+    width: 280px;
+    font-size: 20px;
+    padding: 0px 0px 20.38px 0px;
+  }
+
+  .about-us__text {
+    width: 279px;
+    font-size: 15px;
+    padding: 0px 0px 36px 0px;
+  }
+
+  .about-us__btn {
+    margin: 0px 0px 55px 0px;
+  }
+
+  .yes-vitamines {
+    padding: 50px 0px 50px 0px;
+  }
+
+  .yes-vitamines__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .yes-vitamines__typography {
+    padding: 32px 0px 0px 0px;
+  }
+
+  .yes-vitamines__title {
+    padding: 0px 0px 28px 0px;
+  }
+
+  .footer {
+    padding: 60px 0px;
+  }
+
+  .footer__logo {
+    padding-bottom: 36.27px;
+  }
+
+  .footer__copyright {
+    font-size: 13px;
+  }
+
+  .footer__contacts {
+    padding-bottom: 40.19px;
+  }
+
+  .footer__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .footer__link {
+    padding: 0px;
+    border-right: none;
+  }
+
+  .btn {
+    font-size: 12px;
+    line-height: 116.66667%;
+  }
+}
+
+.webp .about-us__content { background: url(../../img/about-us/about-us-background1440x676.webp) top/cover no-repeat; }
+
+@media (max-width: 872.98px) {
+
+  .webp .about-us__content { background: url(../../img/about-us/about-us-background1086x542.webp) top/cover no-repeat; }
+}
+
+@media (max-width: 479.98px) {
+
+  .webp .about-us__content { background: url(../../img/about-us/about-us-background322x526.webp) top/cover no-repeat; }
 }
