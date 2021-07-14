@@ -16,16 +16,13 @@
             flex-direction: column;
         }
     }
-    &__img{
-
-    }
     &__typography{
-        padding: 0px 100px 0px 29.6px;
+        padding: 0px 100/ $maxWidthContainer * 100% 0px 30.6 /$maxWidthContainer * 100%;
         @media (max-width: $md2 + px) {
-            padding: 0px 16px 0px 18.94px;
+            padding: 0px 16/ $maxWidthContainer * 100% 0px 18.94 /$maxWidthContainer * 100%;
         }
         @media (max-width: $md3 + px) {
-            padding: 0px 0px 0px 23.88px;
+            padding: 0px 0px 0px 23.88 /$maxWidthContainer * 100%;
         }
         @media (max-width: $md4 + px) {
             padding: 32px 0px 0px 0px;

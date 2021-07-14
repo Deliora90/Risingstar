@@ -109,6 +109,16 @@ body {
   line-height: 130%;
 }
 
+.title-secondary {
+  font-family: 'Merriweather';
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -0.02em;
+  color: #363945;
+  line-height: 150%;
+}
+
 .text {
   font-family: 'Roboto';
   font-size: 16px;
@@ -275,7 +285,7 @@ body {
 }
 
 .yes-vitamines__typography {
-  padding: 0px 100px 0px 29.6px;
+  padding: 0px 8.54701% 0px 2.61538%;
 }
 
 .yes-vitamines__title {
@@ -288,6 +298,88 @@ body {
 
 .yes-vitamines__text:last-child {
   padding: 0;
+}
+
+.ecological-product {
+  height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #49B87F;
+}
+
+.ecological-product__img-left {
+  width: 127.38px;
+  height: 116.69px;
+}
+
+.ecological-product__img-right {
+  width: 60.88px;
+  height: 55.28px;
+}
+
+.ecological-product__text {
+  font-family: "Merriweather";
+  font-size: 60px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  line-height: 150%;
+  padding: 0px 2.39316% 0px 3.38632%;
+}
+
+.about-product {
+  background-color: #F9FCFD;
+  padding: 116px 0px 100px 0px;
+}
+
+.about-product__body {
+  background: url(../../img/about-product/about-product-capsula.gif) no-repeat top;
+}
+
+.about-product__title {
+  padding: 0px 27.77778% 60px 27.77778%;
+  text-align: center;
+}
+
+.product-achievements__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 0px 63px 0px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product-achievements__row:last-child {
+  margin: 0;
+}
+
+.product-achievements__container {
+  max-width: 350px;
+  width: 29.91453vw;
+  min-height: 315px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.product-achievements__title {
+  margin: 20px 0px 18px 0px;
 }
 
 .footer {
@@ -419,6 +511,10 @@ body {
     font-size: 32px;
   }
 
+  .title-secondary {
+    font-size: 20px;
+  }
+
   .header__logo {
     width: 102px;
     height: 68px;
@@ -433,11 +529,23 @@ body {
   }
 
   .yes-vitamines__typography {
-    padding: 0px 16px 0px 18.94px;
+    padding: 0px 1.36752% 0px 1.6188%;
   }
 
   .yes-vitamines__title {
     padding: 0px 0px 56px 0px;
+  }
+
+  .about-product {
+    padding: 121px 0px 87px 0px;
+  }
+
+  .about-product__title {
+    padding: 0px 11.51242% 56px 11.51242%;
+  }
+
+  .product-achievements__row {
+    margin: 0px 0px 71px 0px;
   }
 }
 
@@ -576,11 +684,41 @@ body {
   }
 
   .yes-vitamines__typography {
-    padding: 0px 0px 0px 23.88px;
+    padding: 0px 0px 0px 2.04103%;
   }
 
   .yes-vitamines__title {
     padding: 0px 0px 36px 0px;
+  }
+
+  .ecological-product {
+    height: 120px;
+  }
+
+  .ecological-product__img-left {
+    width: 97px;
+    height: 89px;
+  }
+
+  .ecological-product__img-right {
+    width: 45.66px;
+    height: 41.46px;
+  }
+
+  .ecological-product__text {
+    font-size: 44px;
+  }
+
+  .about-product {
+    padding: 121px 0px 100px 0px;
+  }
+
+  .about-product__body {
+    background: none;
+  }
+
+  .product-achievements__container {
+    width: 318px;
   }
 
   .footer {
@@ -629,13 +767,17 @@ body {
   }
 }
 
-@media (max-width: 479.98px) {
+@media (max-width: 606.98px) {
   ._container {
     max-width: 280px;
   }
 
   .title-primary {
     font-size: 18px;
+  }
+
+  .title-secondary {
+    font-size: 16px;
   }
 
   .header__logo {
@@ -693,6 +835,44 @@ body {
     padding: 0px 0px 28px 0px;
   }
 
+  .ecological-product {
+    height: 64px;
+  }
+
+  .ecological-product__img-left {
+    width: 41px;
+    height: 37px;
+  }
+
+  .ecological-product__img-right {
+    width: 19.02px;
+    height: 17.28px;
+  }
+
+  .ecological-product__text {
+    font-size: 20px;
+  }
+
+  .about-product {
+    padding: 56px 0px 0px 0px;
+  }
+
+  .about-product__title {
+    padding: 0px 0 48px 0;
+    text-align: left;
+  }
+
+  .product-achievements__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .product-achievements__container {
+    width: 277px;
+  }
+
   .footer {
     padding: 60px 0px;
   }
@@ -740,7 +920,7 @@ body {
   .webp .about-us__content { background: url(../../img/about-us/about-us-background1086x542.webp) top/cover no-repeat; }
 }
 
-@media (max-width: 479.98px) {
+@media (max-width: 606.98px) {
 
   .webp .about-us__content { background: url(../../img/about-us/about-us-background322x526.webp) top/cover no-repeat; }
 }
