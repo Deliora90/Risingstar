@@ -29,13 +29,9 @@
     }
     &__title {
         width: 623px;
-        font-family: "Merriweather";
-        font-weight: normal;
-        color: $dark-grey-color;
         font-size: 38px;
         line-height: 150%;
         text-align: center;
-        letter-spacing: -0.02em;
         padding: 0px 0px 42px 0px;
 
         @media (max-width: $md2 + px) {
@@ -54,13 +50,9 @@
     }
     &__text {
         width: 570px;
-        font-family: Roboto;
-        font-weight: 300;
         font-size: 20px;
         line-height: 150%;
-        color: $grey-color;
         text-align: center;
-        letter-spacing: -0.02em;
         padding: 0px 0px 57px 0px;
 
         @media (max-width: $md3 + px) {

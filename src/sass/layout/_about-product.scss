@@ -1,5 +1,5 @@
 .about-product {
-    background-color: #F9FCFD;
+    background-color: $super-light-blue-color;
     padding: 116px 0px 100px 0px;
     @media (max-width: $md2 + px) {
         padding: 121px 0px 87px 0px;
@@ -17,13 +17,15 @@
         }
     }
     &__title{
-        padding: 0px 325 / $maxWidthContainer * 100% 60px 325 / $maxWidthContainer * 100%;
+        margin: 0px 0px 60px 0px;
+        padding: 0px 325 / $maxWidthContainer * 100% 0px 325 / $maxWidthContainer * 100%;
         text-align: center;
         @media (max-width: $md2 + px) {
-            padding: 0px 118 / $md2 * 100% 56px 118 /$md2 * 100%;
+            margin: 0px 0px 56px 0px;
+            padding: 0px 118 / $md2 * 100% 0px 118 /$md2 * 100%;
         }
         @media (max-width: $md4 + px) {
-            padding: 0px 0 48px 0;
+            margin: 0px 0 48px 0;
             text-align: left;
         }
     }
@@ -59,5 +61,8 @@
     }
     &__title {
         margin: 20px 0px 18px 0px;
+    }
+    &__text{
+        letter-spacing: -0.01em;
     }
 }

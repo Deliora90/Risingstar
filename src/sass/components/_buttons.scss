@@ -25,4 +25,26 @@
         font-size: 12px;
         line-height: 14 / 12 * 100%;
     }
+    &_secondary{
+        min-width: 98px;
+        padding: 0px;
+        height: 35px;
+        background-color: #FFFFFF;
+        color: $dark-grey-color;
+        font-size: 12px;
+        line-height: 14px;
+        border: 1px solid transparent;
+        @media (min-width: $md3 + px) {
+            &:hover{
+                color: #3A4463;
+                background: #EBECF0;
+                border: 1px solid $dark-grey-color;
+            }
+            &:active{
+                color: $dark-grey-color;
+                background: #FFFFFF;
+                border: 1px solid $dark-grey-color;
+            }
+        }
+    }
 }

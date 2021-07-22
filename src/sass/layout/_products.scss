@@ -1,0 +1,113 @@
+.products {
+    &__container {
+    }
+    &__title {
+        text-align: center;
+        margin: 111px 0px 60px 0px;
+    }
+    &__tabs {
+    }
+}
+.products-list {
+    margin: 60px 0px 41px 0px;
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: repeat(6, minmax(130px, 170px));
+    gap: 25px  30 / $maxWidthContainer * 100%;
+
+    @media (max-width: $md2 + px) {
+        gap: 20px 20 / $md2 * 100%;
+    }
+    @media (max-width: $md3 + px) {
+        grid-template-columns: repeat(4, minmax(130px, 170px));
+        gap: 2px 20 / $md3 * 100%;
+    }
+    @media (max-width: $md4 + px) {
+        grid-template-columns: repeat(2, minmax(130px, 170px));
+        gap: 25px 20 / $md4 * 100%;
+    }
+    &__item {
+        position: relative;
+        min-height: 356px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $dark-grey-color;
+    }
+    &__item::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        top: 63px;
+        bottom: 69px;
+        border-radius: 5px;
+        background-color: $super-light-blue-color;
+        transition: bottom 0.2s ease 0s;
+    }
+    &__item:hover:before {
+        bottom: 0;
+        background-color: $green-color;
+    }
+    &__item:hover .products-list__info {
+        visibility: visible;
+        color: #fff;
+    }
+    &__item:hover {
+        color: #fff;
+    }
+    &__img {
+        position: relative;
+        z-index: 2;
+    }
+    &__title {
+        position: relative;
+        z-index: 2;
+        color: inherit;
+        text-align: center;
+        padding: 0px 16px;
+        @media (max-width: $md2 + px) {
+            padding: 0px 2px;
+        }
+    }
+    &__info {
+        visibility: hidden;
+        display: flex;
+        margin: auto 16px 18px 16px;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width: $md2 + px) {
+            margin: 18px 10px;
+        }
+        @media (max-width: $md3 + px) {
+            margin: 18px 15px;
+        }
+        @media (max-width: $md2 + px) {
+            margin: 18px 5px;
+        }
+    }
+    &__text {
+        position: relative;
+        color: inherit;
+        z-index: 2;
+        line-height: 14px;
+        text-align: center;
+        margin: 0px 0px 6px 0px;
+    }
+    &__btn {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        @media (max-width: $md2 + px) {
+            width: calc(100% - 12px);
+        }
+        @media (max-width: $md3 + px) {
+            width: calc(100% - 2px);
+        }
+        @media (max-width: $md4 + px) {
+            width: calc(100% - 22px);
+        }
+    }
+}

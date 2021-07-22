@@ -1,0 +1,148 @@
+{
+    "tabs":[
+        {
+            "id": "tab1",
+            "name": "Все продукты",
+            "products":[
+                {
+                    "id": "1",
+                    "img": "/products/product-5-htp.png",
+                    "name": "Премиум комплекс 5-HTP",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "2",
+                    "img": "/products/product-omega3-fish-oil-1320.png",
+                    "name": "Ultra Омега-3 EPA 198/132 DHA баланс",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "3",
+                    "img": "/products/product-vitamins-adaptogens.png",
+                    "name": "Комплекс витаминов и адаптогенов",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "4",
+                    "img": "/products/product-spirulina.png",
+                    "name": "Комплекс хлорелла и спирулина",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "5",
+                    "img": "/products/product-omega3-flavonoids.png",
+                    "name": "Комплекс с Омега-3 и флавоноидами",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "6",
+                    "img": "/products/product-omega3-fish-oil-1620.png",
+                    "name": "Ultra Омега-3 EPA 198/132 DHA баланс",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "7",
+                    "img": "/products/product-neozim.png",
+                    "name": "Пищеварительные ферменты и пробиотики",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "8",
+                    "img": "/products/product-k2d3.png",
+                    "name": "Комплекс витаминов<br/>K2 и D3",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "9",
+                    "img": "/products/product-focus-brainer.png",
+                    "name": "Комплекс ФокусБрейнер",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "10",
+                    "img": "/products/product-collagen-hialuronic.png",
+                    "name": "Коллаген и гиалуроновая кислота",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "11",
+                    "img": "/products/product-black-cumin.png",
+                    "name": "Масло черного тмина с каротиноидами",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "12",
+                    "img": "/products/product-biotin.png",
+                    "name": "Женский комплекс биотин и ресвератрол",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "13",
+                    "img": "/products/product-biolactofem.png",
+                    "name": "Женский комплекс пробиотиков",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "14",
+                    "img": "/products/product-bifidotrim.png",
+                    "name": "Премиум комплекс пробиотиков",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                }
+            ]
+        },
+        {
+            "id": "tab2",
+            "name": "Пробиотики",
+            "products":[
+                {
+                    "id": "7",
+                    "img": "/products/product-neozim.png",
+                    "name": "Пищеварительные ферменты и пробиотики",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "13",
+                    "img": "/products/product-biolactofem.png",
+                    "name": "Женский комплекс пробиотиков",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "14",
+                    "img": "/products/product-bifidotrim.png",
+                    "name": "Премиум комплекс пробиотиков",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                }
+            ]
+        },
+        {
+            "id": "tab3",
+            "name": "Для женщин",
+            "products":[
+                {
+                    "id": "12",
+                    "img": "/products/product-biotin.png",
+                    "name": "Женский комплекс биотин и ресвератрол",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                },
+                {
+                    "id": "13",
+                    "img": "/products/product-biolactofem.png",
+                    "name": "Женский комплекс пробиотиков",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                }
+            ]
+        },
+        {
+            "id": "tab4",
+            "name": "Для детей",
+            "products":[
+                {
+                    "id": "5",
+                    "img": "/products/product-omega3-flavonoids.png",
+                    "name": "Комплекс с Омега-3 и флавоноидами",
+                    "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3"
+                }
+            ]
+        }
+    ]
+}

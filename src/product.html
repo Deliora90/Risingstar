@@ -10,16 +10,19 @@
         <link rel="shortcut icon" href="img/favicon.ico">
         <link rel="stylesheet" href="css/style.min.css">
         <title>Risingstar</title>
+
+        <script language="javascript" type="text/javascript">
+            function OnLoad() {
+                var paramValue = window.location.href.split("?")[1].split("=")[1];
+                document.getElementById("Product").innerHTML = paramValue;
+            }
+        </script>
     </head>
-    <body>
+    <body onload="OnLoad()">
         <div class="wrapper">
             @@include('_header.html')
             <main class="page">
-                @@include('_about-us.html')
-                @@include('_yes-vitamines.html')
-                @@include('_ecological-product.html')
-                @@include('_about-product.html')
-                @@include('_products.html')
+               <p id="Product"></p>
             </main>
             @@include('_footer.html')
         </div>

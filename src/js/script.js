@@ -1,4 +1,5 @@
-@@include('_responsive.js');
+@@include('_products.js');
+@@include('_menu.js');
 
 function testWebP(callback) {
     var webP = new Image();
@@ -15,3 +16,7 @@ testWebP(function (support) {
         document.querySelector('body').classList.add('no-webp');
     }
 });
+
+// function go(){
+//     document.location = "product.html?id=product-omega3";
+// }
