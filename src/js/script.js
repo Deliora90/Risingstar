@@ -1,5 +1,8 @@
 @@include('_products.js');
 @@include('_menu.js');
+@@include('_publications.js');
+
+const month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
 
 function testWebP(callback) {
     var webP = new Image();
@@ -16,6 +19,19 @@ testWebP(function (support) {
         document.querySelector('body').classList.add('no-webp');
     }
 });
+
+function formateDate(date) {
+    return `${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`;
+}
+
+function getDate(date) {
+    return date ? formateDate(date) : "";
+}
+
+
+
+
+
 
 // function go(){
 //     document.location = "product.html?id=product-omega3";

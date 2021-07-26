@@ -1,7 +1,6 @@
 @@include('_select.js');
 @@include('_tab.js');
 function loadProducts(data) {
-    console.log(data);
     let productsTabs = document.querySelector(".products__tabs");
     if (productsTabs) {
         try {

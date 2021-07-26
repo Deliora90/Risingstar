@@ -1,15 +1,19 @@
 .products {
     &__container {
+        padding: 100px 0px 41px 0px;
+        @media (max-width: $md4 + px) {
+            padding: 73px 0px 0px 0px;
+        }
     }
     &__title {
         text-align: center;
-        margin: 111px 0px 60px 0px;
+        margin: 0px 0px 56px 0px;
     }
     &__tabs {
     }
 }
 .products-list {
-    margin: 60px 0px 41px 0px;
+    margin: 60px 0px 0px 0px;
     display: grid;
     align-items: baseline;
     grid-template-columns: repeat(6, minmax(130px, 170px));

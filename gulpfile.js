@@ -9,7 +9,9 @@ let path = {
         js: project_folder + "/js/",
         img: project_folder + "/img/",
         fonts: project_folder + "/fonts/",
-        json: project_folder + "/json/"
+        json: project_folder + "/json/",
+        video: project_folder + "/videos/",
+        gif: project_folder + "/img/"
     },
     src: {
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
@@ -17,14 +19,18 @@ let path = {
         js: source_folder + "/js/script.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,ico,webp}",
         fonts: source_folder + "/fonts/*.ttf",
-        json: source_folder + "/json/*.json"
+        json: source_folder + "/json/*.json",
+        video: source_folder + "/videos/*.{mp4,webm}",
+        gif: source_folder + "/img/**/*.gif"
     },
     watch: {
         html: source_folder + "/**/*.html",
         css: source_folder + "/sass/**/*.scss",
         js: source_folder + "/js/**/*.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,ico,webp}",
-        json: source_folder + "/json/*.json"
+        json: source_folder + "/json/*.json",
+        video: source_folder + "/videos/*.{mp4,webm}",
+        gif: source_folder + "/img/**/*.gif"
     },
     clean: "./" + project_folder + "/",
 };
@@ -145,6 +151,16 @@ function json(){
         .pipe(dest(path.build.json));
 }
 
+function video(){
+    return src(path.src.video)
+        .pipe(dest(path.build.video));
+}
+
+function gif(){
+    return src(path.src.gif)
+    .pipe(dest(path.build.gif));
+}
+
 gulp.task('otf2ttf', function () {
     return src([source_folder + '/fonts/*.otf'])
         .pipe(fonter({
@@ -187,7 +203,7 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, json), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, json, video, gif), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;
@@ -197,6 +213,8 @@ exports.js = js;
 exports.css = css;
 exports.html = html;
 exports.json = json;
+exports.json = video;
+exports.gif = gif;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

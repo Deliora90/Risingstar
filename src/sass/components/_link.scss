@@ -1,0 +1,24 @@
+.link {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: $blue-color;
+
+    &_size_m {
+        font-size: 16px;
+        @media (max-width: $md4 + px) {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+    &_size_s {
+        font-weight: normal;
+        line-height: 15px;
+        font-size: 13px;
+    }
+}
