@@ -22,15 +22,10 @@
             height: 37px;
         }
     }
-    &__menu {
-    }
 }
 
 .menu {
     display: flex;
-
-    &__body {
-    }
     &__list {
         display: flex;
         font-family: "OpenSans";
@@ -48,8 +43,6 @@
                 }
             }
         }
-    }
-    &__link {
     }
 }
 
