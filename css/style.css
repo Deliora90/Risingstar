@@ -229,7 +229,7 @@ body {
 }
 
 .no-webp .about-us__content {
-  background: url(/img/about-us/about-us-background1440x676.png) top/cover no-repeat; }
+  background: url(img/about-us/about-us-background1440x676.png) top/cover no-repeat; }
 
 .about-us__body {
   z-index: 2;
@@ -339,7 +339,7 @@ body {
 }
 
 .about-product__body {
-  background: url(/img/about-product/about-product-capsula.gif) no-repeat top;
+  background: url(img/about-product/about-product-capsula.gif) no-repeat top;
 }
 
 .about-product__title {
@@ -1228,7 +1228,7 @@ body {
   }
 
   .no-webp .about-us__content {
-    background: url(/img/about-us/about-us-background1086x542.png) top/cover no-repeat; }
+    background: url(img/about-us/about-us-background1086x542.png) top/cover no-repeat; }
 
   .about-us__logo {
     padding: 0px 0px 32.04px 0px;
@@ -1422,7 +1422,7 @@ body {
   }
 
   .no-webp .about-us__content {
-    background: url(/img/about-us/about-us-background322x526.png) top/cover no-repeat; }
+    background: url(img/about-us/about-us-background322x526.png) top/cover no-repeat; }
 
   .about-us__body {
     padding: 50vw 0px 0px 0px;
@@ -1608,14 +1608,14 @@ body {
   }
 }
 
-.webp .about-us__content { background: url(/img/about-us/about-us-background1440x676.webp) top/cover no-repeat; }
+.webp .about-us__content { background: url(img/about-us/about-us-background1440x676.webp) top/cover no-repeat; }
 
 @media (max-width: 872.98px) {
 
-  .webp .about-us__content { background: url(/img/about-us/about-us-background1086x542.webp) top/cover no-repeat; }
+  .webp .about-us__content { background: url(img/about-us/about-us-background1086x542.webp) top/cover no-repeat; }
 }
 
 @media (max-width: 606.98px) {
 
-  .webp .about-us__content { background: url(/img/about-us/about-us-background322x526.webp) top/cover no-repeat; }
+  .webp .about-us__content { background: url(img/about-us/about-us-background322x526.webp) top/cover no-repeat; }
 }
