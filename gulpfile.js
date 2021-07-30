@@ -55,7 +55,6 @@ const ttf2woff2 = require("gulp-ttf2woff2");
 const fonter = require("gulp-fonter");
 const babelify = require("babelify");
 const browserify = require("gulp-browserify");
-const ghPages = require("gulp-gh-pages");
 
 function browserSyncFunc() {
   browserSync.init({
@@ -186,11 +185,6 @@ function watchFiles() {
 function clean() {
   return del(path.clean);
 }
-
-gulp.task("deploy", () => gulp.src("./dist/**/*").pipe(ghPages({
-  remoteUrl: "https://github.com/Deliora90/risingstar.git",
-  branch: "gh-pages",
-})));
 
 const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, json, video, gif));
 const watch = gulp.parallel(build, watchFiles, browserSyncFunc);

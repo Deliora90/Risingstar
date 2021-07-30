@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "gulp",
-    "test": "editorconfig-checker --exclude 'node_modules'",
+    "test": "editorconfig-checker --exclude '/dist/**'",
     "deploy": "gulp build && gh-pages -d dist"
   },
   "repository": {
