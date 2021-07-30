@@ -1,18 +1,19 @@
+name: Deploy
+
 on:
+  pull_request:
   push:
-    branches: 
+    branches:
       - main
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [12.x]
     steps:
       - uses: actions/checkout@v2
-      - name: Run a one-line script
-        
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
