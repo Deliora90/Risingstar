@@ -21,9 +21,12 @@ jobs:
       - run: -set -eu
       - run: 
       #Start
-      - run: npm ci
-      - run: npm test
-      - run: gulp build
+      - name: Install
+        run: npm ci
+      - name: Test
+        run: npm test
+      - name: Build
+        run: gulp build
       - uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
