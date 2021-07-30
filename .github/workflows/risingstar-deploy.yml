@@ -17,6 +17,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      #Start
       - run: npm ci
       - run: npm test
-      - run: gulp build && gh-pages -d dist
+      #Build
+      - run: gulp build
+      #Deploy
+      - run: gh-pages -d dist
