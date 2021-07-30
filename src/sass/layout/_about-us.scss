@@ -1,11 +1,11 @@
 .about-us {
     &__content {
-        background: url(/img/about-us/about-us-background1440x676.png) top/cover no-repeat;
+        background: url(../img/about-us/about-us-background1440x676.png) top/cover no-repeat;
         @media (max-width: $md3 + px) {
-            background: url(/img/about-us/about-us-background1086x542.png) top/cover no-repeat;
+            background: url(../img/about-us/about-us-background1086x542.png) top/cover no-repeat;
         }
         @media (max-width: $md4 + px) {
-            background: url(/img/about-us/about-us-background322x526.png) top/cover no-repeat;
+            background: url(../img/about-us/about-us-background322x526.png) top/cover no-repeat;
         }
     }
     &__body {

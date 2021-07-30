@@ -6,11 +6,11 @@
   "scripts": {
     "start": "gulp",
     "test": "editorconfig-checker --exclude 'node_modules'",
-    "deploy": "gulp deploy"
+    "deploy": "gulp build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Deliora90/Risingstar.git"
+    "url": "git+https://github.com/Deliora90/risingstar.git"
   },
   "keywords": [
     "risingstar"
@@ -18,9 +18,9 @@
   "author": "Sakharova M.A.",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Deliora90/Risingstar/issues"
+    "url": "https://github.com/Deliora90/risingstar/issues"
   },
-  "homepage": "https://github.com/Deliora90/Risingstar#readme",
+  "homepage": "https://github.com/Deliora90/risingstar#readme",
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@babel/polyfill": "^7.12.1",
@@ -38,7 +38,6 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-file-include": "^2.3.0",
     "gulp-fonter": "^0.3.0",
-    "gulp-gh-pages": "^0.5.4",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
@@ -51,6 +50,7 @@
     "webp-converter": "^2.2.3"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "gulp-sass": "^4.1.0"
   }
 }

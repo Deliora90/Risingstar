@@ -1,7 +1,6 @@
 const projectFolder = "dist";
 
 const sourceFolder = "src";
-const fs = require("fs");
 
 const path = {
   build: {
@@ -176,30 +175,6 @@ gulp.task("otf2ttf", () => src([`${sourceFolder}/fonts/*.otf`])
   }))
   .pipe(dest(`${sourceFolder}/fonts/`)));
 
-function cb() { }
-
-// eslint-disable-next-line consistent-return
-function fontsStyle() {
-  const fileContent = fs.readFileSync(`${sourceFolder}/sass/base/_fonts.scss`);
-  if (fileContent === "") {
-    fs.writeFile(`${sourceFolder}/sass/base/_fonts.scss`, "", cb);
-    return fs.readdir(path.build.fonts, (err, items) => {
-      if (items) {
-        let cFontname;
-        for (let i = 0; i < items.length; i += 1) {
-          const fontname = items[i].split(".");
-          // eslint-disable-next-line prefer-destructuring
-          cFontname = fontname[0];
-          if (cFontname !== fontname) {
-            fs.appendFile(`${sourceFolder}/sass/base/_fonts.scss`, `@include font("${fontname}", "${fontname}", "400", "normal");\r\n`, cb);
-          }
-          cFontname = fontname;
-        }
-      }
-    });
-  }
-}
-
 function watchFiles() {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
@@ -214,15 +189,12 @@ function clean() {
 
 gulp.task("deploy", () => gulp.src("./dist/**/*").pipe(ghPages({
   remoteUrl: "https://github.com/Deliora90/risingstar.git",
-  branch: "gp-pages",
+  branch: "gh-pages",
 })));
 
-const build = gulp.series(clean,
-  gulp.parallel(js, css, html, images, fonts, json, video, gif),
-  fontsStyle);
+const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, json, video, gif));
 const watch = gulp.parallel(build, watchFiles, browserSyncFunc);
 
-exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
