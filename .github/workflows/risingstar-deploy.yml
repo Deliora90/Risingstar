@@ -20,7 +20,4 @@ jobs:
       #Start
       - run: npm ci
       - run: npm test
-      #Build
-      - run: gulp build
-      #Deploy
-      - run: gh-pages -d dist
+      - run: npm run deploy
