@@ -17,7 +17,16 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+      #Setup key
+      - run: -set -eu
+      - run: 
       #Start
       - run: npm ci
       - run: npm test
-      - run: npm run deploy
+      - run: gulp build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
