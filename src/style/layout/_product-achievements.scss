@@ -1,0 +1,36 @@
+.product-achievements {
+    &__row {
+        display: flex;
+        margin: 0px 0px 63px 0px;
+        justify-content: space-between;
+        &:last-child{
+            margin: 0;
+        }
+        @media (max-width: $md2 + px) {
+            margin: 0px 0px 71px 0px;
+        } 
+        @media (max-width: $md4 + px) {
+            flex-direction: column;
+        }
+    }
+    &__container {
+        max-width: 350px;
+        width: 350 / $maxWidthContainer * 100vw;
+        min-height: 315px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        @media (max-width: $md3 + px) {
+            width: 318px;
+        }
+        @media (max-width: $md4 + px) {
+            width: 277px;
+        }
+    }
+    &__title {
+        margin: 20px 0px 18px 0px;
+    }
+    &__text{
+        letter-spacing: -0.01em;
+    }
+}

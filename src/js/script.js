@@ -2,11 +2,11 @@
 import "@babel/polyfill";
 
 import { setActiveMobileMenu } from "./_menu";
-import { getProducts } from "./_products";
+import { getData } from "./_products";
 import { getPublications } from "./_publications";
 
 setActiveMobileMenu();
-getProducts();
+getData();
 getPublications();
 
 function testWebP(callback) {
@@ -25,6 +25,3 @@ testWebP((support) => {
     document.querySelector("body").classList.add("no-webp");
   }
 });
-// function go(){
-//     document.location = "product.html?id=product-omega3";
-// }

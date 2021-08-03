@@ -1,0 +1,22 @@
+.quality-standarts {
+    background-color: $super-light-blue-color;
+    &__container {
+        padding: 100px 0px;
+        @media (max-width: $md4 + px) {
+            padding: 56px 0px;
+        }
+    }
+    &__title {
+        text-align: center;
+        padding: 0px 300px 0px 300px;
+        margin: 0px 0px 60px 0px;
+        @media (max-width: $md3 + px) {
+            font-size: 28px;
+            padding: 0px 88px 0px 88px;
+        }
+        @media (max-width: $md4 + px) {
+            text-align: left;
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.list-standarts {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @media (max-width: $md2 + px) {
+        gap: 20px;
+    }
+    @media (max-width: $md3 + px) {
+        flex-wrap: wrap;
+    }
+    &__item {
+        flex: 1 1 270 / $maxWidthContainer * 100%;
+        background-color: #fff;
+        display: flex;
+        align-items: flex-start;
+        padding: 42px 28px;
+        flex-direction: column;
+        @media (max-width: $md2 + px) {
+            padding: 42px 22.81px;
+        }
+        @media (max-width: $md3 + px) {
+            flex: 1 1 320 / $md3 * 100%;
+            padding: 42px 33.19px;
+        }
+        @media (max-width: $md4 + px) {
+            padding: 42px 28.73px;
+        }
+    }
+    &__title {
+        margin: 27px 0px 16px 0px;
+    }
+}

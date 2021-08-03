@@ -1,0 +1,12 @@
+.products {
+    &__container {
+        padding: 100px 0px 41px 0px;
+        @media (max-width: $md4 + px) {
+            padding: 73px 0px 0px 0px;
+        }
+    }
+    &__title {
+        text-align: center;
+        margin: 0px 0px 56px 0px;
+    }
+}

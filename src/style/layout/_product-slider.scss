@@ -1,0 +1,89 @@
+.product-slider {
+    background-color: $super-light-blue-color;
+    &__container{
+       
+    }
+    @media (max-width: $md4 + px) {
+        display: none;
+    }
+    &__slide {
+        position: relative;
+        z-index: 2;
+        color: $grey-color;
+        &:hover {
+            color: $dark-grey-color;
+        }
+        &:hover::after {
+            content: "";
+            z-index: 1;
+            position: absolute;
+
+            left: calc(50% - 55px);
+            bottom: 0px;
+            height: 110px;
+            width: 110px;
+            border-radius: 50%;
+            border: 1px solid #E9F4FA;
+            box-shadow: 0px 2px 4px rgba(105, 183, 220, 0.07);
+            background-color: #FFFFFF;
+            color: $dark-grey-color;
+        }
+    }
+    &__content {
+        position: relative;
+        z-index: 2;
+        width: 101px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 32px auto;
+        color: inherit;
+        @media (max-width: $md3 + px) {
+            width: 80px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+    }
+    &__label {
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 128.91%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: inherit;
+    }
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        width: calc(var(--swiper-navigation-size) / 44 * 27);
+        height: var(--swiper-navigation-size);
+        margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+        z-index: 10;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $blue-color;
+        font-size: 52px;
+
+        @media (max-width: $md3 + px) {
+            font-size: 25px;
+        }
+
+        &_disabled {
+            color: #91a2b0;
+        }
+        &_left {
+            left: 10.8px;
+        }
+        &_right {
+            right: 10.8px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.about-products {
+    background-color: $super-light-blue-color;
+    padding: 116px 0px 100px 0px;
+    @media (max-width: $md2 + px) {
+        padding: 121px 0px 87px 0px;
+    }
+    @media (max-width: $md3 + px) {
+        padding: 121px 0px 100px 0px;
+    }
+    @media (max-width: $md4 + px) {
+        padding: 56px 0px 0px 0px;
+    }
+    &__body {
+        background: url(../img/about-products/about-products-capsula.gif) no-repeat top;
+        @media (max-width: $md3 + px) {
+            background: none;
+        }
+    }
+    &__title{
+        margin: 0px 0px 60px 0px;
+        padding: 0px 325 / $maxWidthContainer * 100% 0px 325 / $maxWidthContainer * 100%;
+        text-align: center;
+        @media (max-width: $md2 + px) {
+            margin: 0px 0px 56px 0px;
+            padding: 0px 118 / $md2 * 100% 0px 118 /$md2 * 100%;
+        }
+        @media (max-width: $md4 + px) {
+            margin: 0px 0 48px 0;
+            text-align: left;
+        }
+    }
+}

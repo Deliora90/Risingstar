@@ -56,7 +56,6 @@ function setDefaultValue() {
     });
   }
 }
-
 export {
   setTabHandler,
   setDefaultValue,

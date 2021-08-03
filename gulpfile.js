@@ -15,21 +15,23 @@ const path = {
   },
   src: {
     html: [`${sourceFolder}/*.html`, `!${sourceFolder}/_*.html`],
-    css: `${sourceFolder}/sass/style.scss`,
+    css: `${sourceFolder}/style/style.scss`,
     js: `${sourceFolder}/js/script.js`,
     img: `${sourceFolder}/img/**/*.{jpg,png,svg,ico,webp}`,
     fonts: `${sourceFolder}/fonts/*.ttf`,
     json: `${sourceFolder}/json/*.json`,
-    video: `${sourceFolder}/videos/*.{mp4,webm}`,
+    video: `${sourceFolder}/videos/*.{mp4,webm,jpg}`,
     gif: `${sourceFolder}/img/**/*.gif`,
+    cssDependencies: `${sourceFolder}/style/swiper-bundle.min.css`,
+    jsDependencies: `${sourceFolder}/js/swiper-bundle.min.js`,
   },
   watch: {
     html: `${sourceFolder}/**/*.html`,
-    css: `${sourceFolder}/sass/**/*.scss`,
+    css: `${sourceFolder}/style/**/*.scss`,
     js: `${sourceFolder}/js/**/*.js`,
     img: `${sourceFolder}/img/**/*.{jpg,png,svg,ico,webp}`,
     json: `${sourceFolder}/json/*.json`,
-    video: `${sourceFolder}/videos/*.{mp4,webm}`,
+    video: `${sourceFolder}/videos/*.{mp4,webm,jpg}`,
     gif: `${sourceFolder}/img/**/*.gif`,
   },
   clean: `./${projectFolder}/`,
@@ -104,6 +106,11 @@ function css() {
     .pipe(browserSync.stream());
 }
 
+function cssDependencies() {
+  return src(path.src.cssDependencies)
+    .pipe(dest(path.build.css));
+}
+
 function js() {
   return src(path.src.js, { allowEmpty: true })
     .pipe(fileInclude())
@@ -121,6 +128,11 @@ function js() {
     )
     .pipe(dest(path.build.js))
     .pipe(browserSync.stream());
+}
+
+function jsDependencies() {
+  return src(path.src.jsDependencies)
+    .pipe(dest(path.build.js));
 }
 
 function images() {
@@ -186,7 +198,8 @@ function clean() {
   return del(path.clean);
 }
 
-const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, json, video, gif));
+const build = gulp.series(clean,
+  gulp.parallel(js, css, html, images, fonts, json, video, gif, cssDependencies, jsDependencies));
 const watch = gulp.parallel(build, watchFiles, browserSyncFunc);
 
 exports.fonts = fonts;
@@ -197,6 +210,8 @@ exports.html = html;
 exports.json = json;
 exports.json = video;
 exports.gif = gif;
+exports.cssDependencies = cssDependencies;
+exports.jsDependencies = jsDependencies;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

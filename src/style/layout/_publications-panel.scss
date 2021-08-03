@@ -1,0 +1,21 @@
+.publications-panel {
+    padding: 100px 0px;
+    background-color: $super-light-blue-color;
+    @media (max-width: $md4 + px) {
+        padding: 56px 0px;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 60px;
+        @media (max-width: $md2 + px) {
+            margin-bottom: 65px;
+        }
+        @media (max-width: $md3 + px) {
+            margin-bottom: 55px;
+        }
+        @media (max-width: $md4 + px) {
+            text-align: left;
+            margin-bottom: 48px;
+        }
+    }
+}
