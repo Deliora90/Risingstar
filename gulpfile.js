@@ -12,6 +12,7 @@ const path = {
     json: `${projectFolder}/json/`,
     video: `${projectFolder}/videos/`,
     gif: `${projectFolder}/img/`,
+    docs: `${projectFolder}/docs/`,
   },
   src: {
     html: [`${sourceFolder}/*.html`, `!${sourceFolder}/_*.html`],
@@ -24,6 +25,7 @@ const path = {
     gif: `${sourceFolder}/img/**/*.gif`,
     cssDependencies: `${sourceFolder}/style/swiper-bundle.min.css`,
     jsDependencies: `${sourceFolder}/js/swiper-bundle.min.js`,
+    docs: `${sourceFolder}/docs/**/*.{pdf,doc,docx,txt}`,
   },
   watch: {
     html: `${sourceFolder}/**/*.html`,
@@ -33,6 +35,7 @@ const path = {
     json: `${sourceFolder}/json/*.json`,
     video: `${sourceFolder}/videos/*.{mp4,webm,jpg}`,
     gif: `${sourceFolder}/img/**/*.gif`,
+    docs: `${sourceFolder}/docs/**/*.{pdf,doc,docx,txt}`,
   },
   clean: `./${projectFolder}/`,
 };
@@ -180,6 +183,11 @@ function gif() {
     .pipe(dest(path.build.gif));
 }
 
+function docs() {
+  return src(path.src.docs)
+    .pipe(dest(path.build.docs));
+}
+
 gulp.task("otf2ttf", () => src([`${sourceFolder}/fonts/*.otf`])
   .pipe(fonter({
     formats: ["ttf"],
@@ -192,6 +200,8 @@ function watchFiles() {
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.img], images);
   gulp.watch([path.watch.json], json);
+  gulp.watch([path.watch.gif], gif);
+  gulp.watch([path.watch.docs], docs);
 }
 
 function clean() {
@@ -199,7 +209,8 @@ function clean() {
 }
 
 const build = gulp.series(clean,
-  gulp.parallel(js, css, html, images, fonts, json, video, gif, cssDependencies, jsDependencies));
+  gulp.parallel(js, css, html, images, fonts, json,
+    video, gif, cssDependencies, jsDependencies, docs));
 const watch = gulp.parallel(build, watchFiles, browserSyncFunc);
 
 exports.fonts = fonts;
@@ -212,6 +223,7 @@ exports.json = video;
 exports.gif = gif;
 exports.cssDependencies = cssDependencies;
 exports.jsDependencies = jsDependencies;
+exports.docs = docs;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

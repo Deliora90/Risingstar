@@ -1,0 +1,32 @@
+.product-properties {
+    display: grid;
+    gap: 27px 33px;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    @media (max-width: $md4 + px) {
+        grid-template: repeat(2, 1fr) / 1fr;
+    }
+    &__item {
+        display: flex;
+        gap: 33 / $maxWidthContainer * 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+    &__img-container{
+        max-width: 20%;
+    }
+    &__img {
+        max-width: 100%;
+    }
+    &__info{
+        max-width: 80%;
+    }
+    &__label {
+    }
+    &__description {
+    }
+}

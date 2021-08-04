@@ -3,22 +3,45 @@
         {
             "id": "tab1",
             "name": "Все продукты",
-            "products": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"]
+            "products": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14"
+            ]
         },
         {
             "id": "tab2",
             "name": "Пробиотики",
-            "products": ["13", "14"]
+            "products": [
+                "13",
+                "14"
+            ]
         },
         {
             "id": "tab3",
             "name": "Для женщин",
-            "products": ["12", "13"]
+            "products": [
+                "12",
+                "13"
+            ]
         },
         {
             "id": "tab4",
             "name": "Для детей",
-            "products": ["5"]
+            "products": [
+                "5"
+            ]
         }
     ],
     "products": [
@@ -27,6 +50,7 @@
             "img": "/products/product-5-htp.png",
             "name": "Премиум комплекс 5-HTP",
             "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3",
+            "instructions": "/docs/Instructions-1.pdf",
             "about": [
                 {
                     "id": "about1",
@@ -103,13 +127,27 @@
                     "description": "панкреатин и папаин"
                 }
             ],
-            "links": []
+            "links": [
+                {
+                    "link": "https://www.ozon.ru/",
+                    "icon": "img/products/product-link-ozon.png"
+                },
+                {
+                    "link": "https://www.wildberries.ru/",
+                    "icon": "img/products/product-link-wildberries.png"
+                },
+                {
+                    "link": "https://best.aliexpress.ru/?+",
+                    "icon": "img/products/product-link-aliexpress.png"
+                }
+            ]
         },
         {
             "id": "2",
             "img": "/products/product-omega3-fish-oil-1320.png",
             "name": "Ultra Омега-3 EPA 198/132 DHA баланс",
             "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3",
+            "instructions": "/docs/Instructions-2.pdf",
             "about": [
                 {
                     "id": "about1",
@@ -186,13 +224,27 @@
                     "description": "панкреатин и папаин"
                 }
             ],
-            "links": []
+            "links": [
+                {
+                    "link": "https://www.ozon.ru/",
+                    "icon": "img/products/product-link-ozon.png"
+                },
+                {
+                    "link": "https://www.wildberries.ru/",
+                    "icon": "img/products/product-link-wildberries.png"
+                },
+                {
+                    "link": "https://best.aliexpress.ru/?+",
+                    "icon": "img/products/product-link-aliexpress.png"
+                }
+            ]
         },
         {
             "id": "3",
             "img": "/products/product-vitamins-adaptogens.png",
             "name": "Комплекс витаминов и адаптогенов",
             "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3",
+            "instructions": "/docs/Instructions-3.pdf",
             "about": [
                 {
                     "id": "about1",
@@ -269,13 +321,27 @@
                     "description": "панкреатин и папаин"
                 }
             ],
-            "links": []
+            "links": [
+                {
+                    "link": "https://www.ozon.ru/",
+                    "icon": "img/products/product-link-ozon.png"
+                },
+                {
+                    "link": "https://www.wildberries.ru/",
+                    "icon": "img/products/product-link-wildberries.png"
+                },
+                {
+                    "link": "https://best.aliexpress.ru/?+",
+                    "icon": "img/products/product-link-aliexpress.png"
+                }
+            ]
         },
         {
             "id": "4",
             "img": "/products/product-spirulina.png",
             "name": "Комплекс хлорелла и спирулина",
             "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3",
+            "instructions": "/docs/Instructions-1.pdf",
             "about": [
                 {
                     "id": "about1",
@@ -352,13 +418,27 @@
                     "description": "панкреатин и папаин"
                 }
             ],
-            "links": []
+            "links": [
+                {
+                    "link": "https://www.ozon.ru/",
+                    "icon": "img/products/product-link-ozon.png"
+                },
+                {
+                    "link": "https://www.wildberries.ru/",
+                    "icon": "img/products/product-link-wildberries.png"
+                },
+                {
+                    "link": "https://best.aliexpress.ru/?+",
+                    "icon": "img/products/product-link-aliexpress.png"
+                }
+            ]
         },
         {
             "id": "5",
             "img": "/products/product-omega3-flavonoids.png",
             "name": "Комплекс с Омега-3 и флавоноидами",
             "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3",
+            "instructions": "/docs/Instructions-2.pdf",
             "about": [
                 {
                     "id": "about1",
@@ -435,13 +515,27 @@
                     "description": "панкреатин и папаин"
                 }
             ],
-            "links": []
+            "links": [
+                {
+                    "link": "https://www.ozon.ru/",
+                    "icon": "img/products/product-link-ozon.png"
+                },
+                {
+                    "link": "https://www.wildberries.ru/",
+                    "icon": "img/products/product-link-wildberries.png"
+                },
+                {
+                    "link": "https://best.aliexpress.ru/?+",
+                    "icon": "img/products/product-link-aliexpress.png"
+                }
+            ]
         },
         {
             "id": "6",
             "img": "/products/product-omega3-fish-oil-1620.png",
             "name": "Ultra Омега-3 EPA 198/132 DHA баланс",
             "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3",
+            "instructions": "/docs/Instructions-3.pdf",
             "about": [
                 {
                     "id": "about1",
@@ -518,13 +612,27 @@
                     "description": "панкреатин и папаин"
                 }
             ],
-            "links": []
+            "links": [
+                {
+                    "link": "https://www.ozon.ru/",
+                    "icon": "img/products/product-link-ozon.png"
+                },
+                {
+                    "link": "https://www.wildberries.ru/",
+                    "icon": "img/products/product-link-wildberries.png"
+                },
+                {
+                    "link": "https://best.aliexpress.ru/?+",
+                    "icon": "img/products/product-link-aliexpress.png"
+                }
+            ]
         },
         {
             "id": "8",
             "img": "/products/product-k2d3.png",
             "name": "Комплекс витаминов<br/>K2 и D3",
             "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3",
+            "instructions": "/docs/Instructions-1.pdf",
             "about": [
                 {
                     "id": "about1",
@@ -601,13 +709,27 @@
                     "description": "панкреатин и папаин"
                 }
             ],
-            "links": []
+            "links": [
+                {
+                    "link": "https://www.ozon.ru/",
+                    "icon": "img/products/product-link-ozon.png"
+                },
+                {
+                    "link": "https://www.wildberries.ru/",
+                    "icon": "img/products/product-link-wildberries.png"
+                },
+                {
+                    "link": "https://best.aliexpress.ru/?+",
+                    "icon": "img/products/product-link-aliexpress.png"
+                }
+            ]
         },
         {
             "id": "9",
             "img": "/products/product-focus-brainer.png",
             "name": "Комплекс ФокусБрейнер",
             "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3",
+            "instructions": "/docs/Instructions-2.pdf",
             "about": [
                 {
                     "id": "about1",
@@ -684,13 +806,27 @@
                     "description": "панкреатин и папаин"
                 }
             ],
-            "links": []
+            "links": [
+                {
+                    "link": "https://www.ozon.ru/",
+                    "icon": "img/products/product-link-ozon.png"
+                },
+                {
+                    "link": "https://www.wildberries.ru/",
+                    "icon": "img/products/product-link-wildberries.png"
+                },
+                {
+                    "link": "https://best.aliexpress.ru/?+",
+                    "icon": "img/products/product-link-aliexpress.png"
+                }
+            ]
         },
         {
             "id": "10",
             "img": "/products/product-collagen-hialuronic.png",
             "name": "Коллаген и гиалуроновая кислота",
             "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3",
+            "instructions": "/docs/Instructions-3.pdf",
             "about": [
                 {
                     "id": "about1",
@@ -767,13 +903,27 @@
                     "description": "панкреатин и папаин"
                 }
             ],
-            "links": []
+            "links": [
+                {
+                    "link": "https://www.ozon.ru/",
+                    "icon": "img/products/product-link-ozon.png"
+                },
+                {
+                    "link": "https://www.wildberries.ru/",
+                    "icon": "img/products/product-link-wildberries.png"
+                },
+                {
+                    "link": "https://best.aliexpress.ru/?+",
+                    "icon": "img/products/product-link-aliexpress.png"
+                }
+            ]
         },
         {
             "id": "11",
             "img": "/products/product-black-cumin.png",
             "name": "Масло черного тмина с каротиноидами",
             "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3",
+            "instructions": "/docs/Instructions-1.pdf",
             "about": [
                 {
                     "id": "about1",
@@ -850,13 +1000,27 @@
                     "description": "панкреатин и папаин"
                 }
             ],
-            "links": []
+            "links": [
+                {
+                    "link": "https://www.ozon.ru/",
+                    "icon": "img/products/product-link-ozon.png"
+                },
+                {
+                    "link": "https://www.wildberries.ru/",
+                    "icon": "img/products/product-link-wildberries.png"
+                },
+                {
+                    "link": "https://best.aliexpress.ru/?+",
+                    "icon": "img/products/product-link-aliexpress.png"
+                }
+            ]
         },
         {
             "id": "12",
             "img": "/products/product-biotin.png",
             "name": "Женский комплекс биотин и ресвератрол",
             "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3",
+            "instructions": "/docs/Instructions-2.pdf",
             "about": [
                 {
                     "id": "about1",
@@ -933,13 +1097,27 @@
                     "description": "панкреатин и папаин"
                 }
             ],
-            "links": []
+            "links": [
+                {
+                    "link": "https://www.ozon.ru/",
+                    "icon": "img/products/product-link-ozon.png"
+                },
+                {
+                    "link": "https://www.wildberries.ru/",
+                    "icon": "img/products/product-link-wildberries.png"
+                },
+                {
+                    "link": "https://best.aliexpress.ru/?+",
+                    "icon": "img/products/product-link-aliexpress.png"
+                }
+            ]
         },
         {
             "id": "13",
             "img": "/products/product-biolactofem.png",
             "name": "Женский комплекс пробиотиков",
             "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3",
+            "instructions": "/docs/Instructions-3.pdf",
             "about": [
                 {
                     "id": "about1",
@@ -1016,13 +1194,27 @@
                     "description": "панкреатин и папаин"
                 }
             ],
-            "links": []
+            "links": [
+                {
+                    "link": "https://www.ozon.ru/",
+                    "icon": "img/products/product-link-ozon.png"
+                },
+                {
+                    "link": "https://www.wildberries.ru/",
+                    "icon": "img/products/product-link-wildberries.png"
+                },
+                {
+                    "link": "https://best.aliexpress.ru/?+",
+                    "icon": "img/products/product-link-aliexpress.png"
+                }
+            ]
         },
         {
             "id": "14",
             "img": "/products/product-bifidotrim.png",
             "name": "Премиум комплекс пробиотиков",
             "description": "Mena Q7 PharmaPure, Витамин К2, Витамин D3",
+            "instructions": "/docs/Instructions-1.pdf",
             "about": [
                 {
                     "id": "about1",
@@ -1099,7 +1291,20 @@
                     "description": "панкреатин и папаин"
                 }
             ],
-            "links": []
+            "links": [
+                {
+                    "link": "https://www.ozon.ru/",
+                    "icon": "img/products/product-link-ozon.png"
+                },
+                {
+                    "link": "https://www.wildberries.ru/",
+                    "icon": "img/products/product-link-wildberries.png"
+                },
+                {
+                    "link": "https://best.aliexpress.ru/?+",
+                    "icon": "img/products/product-link-aliexpress.png"
+                }
+            ]
         }
     ]
 }

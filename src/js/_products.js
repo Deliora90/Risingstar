@@ -1,10 +1,6 @@
-import {
-  setSelectHandler,
-} from "./_select";
-import {
-  setTabHandler,
-  setDefaultValue,
-} from "./_tab";
+import { setSelectHandler } from "./_select";
+import { setTabHandler, setDefaultValue } from "./_tab";
+import { activeModal } from "./_modal";
 import { getUniqList } from "./_utils";
 import Swiper from "./swiper-bundle.min";
 
@@ -149,7 +145,6 @@ function loadSliderProducts(products) {
           productContent += productContentStart + image + label + productContentEnd;
         });
         sliderContent = productSliderStart + productContent + productSliderEnd;
-        // sliderContent = loadSliderProducts(products);
         productsPanel.insertAdjacentHTML("afterbegin", sliderContent);
         addSlider();
       }
@@ -160,16 +155,6 @@ function loadSliderProducts(products) {
   }
 }
 // Panel About Product
-function loadAboutProductImg(img) {
-  return `<div class="about-product__img-container">
-            <img src="img/${img}" alt="About-product" class="about-product__img">
-          </div>`;
-}
-function loadAboutProductTitle(name) {
-  return `<div class="about-product__title">
-            <h2 class=" title title_size_xl">${name}</h2>
-          </div>`;
-}
 function getTexts(texts) {
   let result = "";
   if (texts && texts.length > 0) result = texts.reduce((prev, text) => `${prev}<p class="text">${text}</p>`, [""]);
@@ -208,6 +193,89 @@ function getContentAboutProductTab(content) {
     console.log(err);
     return result;
   }
+}
+function loadAboutProductProperties(properties) {
+  let result = "";
+  try {
+    if (properties && properties.length > 0) {
+      const propertiesStart = "<ul class=\"about-product__properties product-properties\">";
+      const propertiesEnd = "</ul>";
+      const propertiesResult = properties.reduce((prev, property) => {
+        const { description, img, label } = property;
+        return `${prev}<li class="product-properties__item">
+                    <div class="product-properties__img-container">
+                        <img src="img/${img}" alt="Product-properties" class="product-properties__img">
+                    </div>
+                    <div class="product-properties__info">
+                        <p class="product-properties__label text text_size_l">${label}</p>
+                        <p class="product-properties__description text text_size_l">${description}</p>
+                    </div>
+                </li>`;
+      }, "");
+      result = propertiesStart + propertiesResult + propertiesEnd;
+    }
+    return result;
+  } catch (err) {
+    console.log(err);
+    return result;
+  }
+}
+function loadAboutProductControl(instructions) {
+  return `<div class="about-product__control">
+            <a href="#shops-modal" class="about-product__btn btn modal-link">
+               Купить у партнеров
+            </a>
+            <a href="${instructions || "#"}" download class="about-product__link link link_size_m">
+              Скачать инструкцию
+            </a>
+          </div>`;
+}
+function loadAboutProductLinks(links) {
+  const shopsModal = document.getElementById("shops-modal");
+  if (shopsModal && links && links.length > 0) {
+    let modal = "";
+    const modalStart = `<div class="modal__body">
+                            <div class="modal__content">
+                              <a href="#" class="modal__close close-modal"></a>
+                              <div class="modal__title title">Купить у наших партнеров</div>`;
+    const modalEnd = "</div></div>";
+    let shops = "";
+    const shopsStart = "<div class=\"shops\">";
+    const shopsEnd = "</div>";
+    const shopsListStart = "<ul class=\"shops__list\">";
+    const shopsListEnd = "</ul>";
+    let shopsListItem = "";
+
+    shopsListItem = links.reduce((prev, linkElement) => {
+      let result = "";
+      const { link, icon } = linkElement;
+      if (link && icon) {
+        result = `${prev} <li class="shops__item">
+                            <a href="${link}" class="shops__link">
+                            <div class="shops__link-container">
+                              <img class="shops__img" src="${icon}" alt="Shop">
+                            </div>
+                          </a>
+                        </li>`;
+      }
+      return result;
+    }, "");
+
+    shops = shopsStart + shopsListStart + shopsListItem + shopsListEnd + shopsEnd;
+    modal = modalStart + shops + modalEnd;
+    console.log("Shops", modal);
+    shopsModal.insertAdjacentHTML("beforeend", modal);
+  }
+}
+function loadAboutProductImg(img) {
+  return `<div class="about-product__img-container">
+            <img src="img/${img}" alt="About-product" class="about-product__img">
+          </div>`;
+}
+function loadAboutProductTitle(name) {
+  return `<div class="about-product__title">
+            <h2 class=" title title_size_xl">${name}</h2>
+          </div>`;
 }
 function loadAboutProductTab(about) {
   let tabsResult = "";
@@ -269,54 +337,15 @@ function loadAboutProductTab(about) {
     return tabsResult;
   }
 }
-function loadAboutProductProperties(properties) {
-  let result = "";
-  try {
-    if (properties && properties.length > 0) {
-      const propertiesStart = "<ul class=\"about-product__properties product-properties\">";
-      const propertiesEnd = "</ul>";
-      const propertiesResult = properties.reduce((prev, property) => {
-        const { description, img, label } = property;
-        return `${prev}<li class="product-properties__item">
-                    <div class="product-properties__img-container">
-                        <img src="img/${img}" alt="Product-properties" class="product-properties__img">
-                    </div>
-                    <div class="product-properties__info">
-                        <p class="product-properties__label text text_size_l">${label}</p>
-                        <p class="product-properties__description text text_size_l">${description}</p>
-                    </div>
-                </li>`;
-      }, "");
-      result = propertiesStart + propertiesResult + propertiesEnd;
-    }
-    return result;
-  } catch (err) {
-    console.log(err);
-    return result;
-  }
-}
-function loadAboutProductControl() {
-  return `<div class="about-product__control">
-            <button class="about-product__btn btn">
-               Купить у партнеров
-            </button>
-            <a class="about-product__link link link_size_m _icon-come-back">
-            </a>
-          </div>`;
-}
-function loadAboutProductLinks(links) {
-  console.log("Links", links);
-  return "";
-}
-function loadAboutProductFooter(properties, links) {
+function loadAboutProductFooter(properties, links, instructions) {
   let result = "";
   try {
     let footerContent = "";
     const footerStart = "<div class=\"about-product__footer\">";
     const footerEnd = "</div>";
     footerContent += loadAboutProductProperties(properties);
-    footerContent += loadAboutProductControl();
-    footerContent += loadAboutProductLinks(links);
+    footerContent += loadAboutProductControl(instructions);
+    loadAboutProductLinks(links);
 
     result = footerStart + footerContent + footerEnd;
     return result;
@@ -337,11 +366,12 @@ function loadAboutProduct(product) {
         about,
         properties,
         links,
+        instructions,
       } = product;
       const aboutProdustImg = loadAboutProductImg(img);
       const aboutProductTitle = loadAboutProductTitle(name);
       const aboutProdustTabs = loadAboutProductTab(about);
-      const aboutProductFooter = loadAboutProductFooter(properties, links);
+      const aboutProductFooter = loadAboutProductFooter(properties, links, instructions);
       aboutProduct = aboutProdustImg + aboutProductTitle + aboutProdustTabs + aboutProductFooter;
       aboutProductPanel.insertAdjacentHTML("beforeend", aboutProduct);
     }
@@ -414,6 +444,7 @@ async function getData() {
     setTabHandler();
     setSelectHandler();
     setDefaultValue();
+    activeModal();
   }
 }
 export {
