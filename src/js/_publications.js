@@ -2,6 +2,20 @@ import {
   getDate,
 } from "./_utils";
 
+function getPublication(data) {
+  let publication = null;
+  const { publications } = data;
+  try {
+    const paramValue = window.location.href.split("?")[1].split("=")[1];
+    if (publications.length > 0 && paramValue) {
+      publication = publications.find((item) => String(item.id) === paramValue);
+    }
+    return publication;
+  } catch (err) {
+    console.log(err);
+    return publication;
+  }
+}
 function loadPublications(data) {
   const publicationsPanelList = document.querySelector(".publications-panel__list");
   if (publicationsPanelList) {
@@ -13,20 +27,18 @@ function loadPublications(data) {
 
         for (let i = 0; i < COUNT_PUBLICATION; i += 1) {
           const publication = publications[i];
-          // const id = publication.id;
-          const titlePublication = publication.title;
-          const subtitlePublication = publication.subtitle;
+          const { id, title, subtitle } = publication;
           const date = publication.date ? new Date(publication.date) : "";
           const dateDesc = getDate(date);
           const imgPath = publication.img_path;
           const articleTemplate = `<article class="publication__item">
-                                                <img src="img/${imgPath}" alt="Publication Image" class="publication__img">
+                                                <img src="${imgPath}" alt="Publication Image" class="publication__img">
                                                 <div class="publication__container">
-                                                    <h3 class="publication__title title title_size_m">${titlePublication}</h3>
-                                                    <p class="publication__text text">${subtitlePublication}</p>
+                                                    <h3 class="publication__title title title_size_m">${title}</h3>
+                                                    <p class="publication__text text">${subtitle}</p>
                                                     <div class="publication__footer">
                                                         <time class="publication__date" datetime="${date}">${dateDesc}</time>
-                                                        <a class="publication__link _icon-next link link_size_s"></a>
+                                                        <a class="publication__link _icon-next link link_size_s" href="publication.html?id=${id}"></a>
                                                     </div>
                                                 </div>
                                             </article>`;
@@ -39,6 +51,27 @@ function loadPublications(data) {
     }
   }
 }
+function loadPublicationPage(publication) {
+  const publicationPage = document.querySelector(".publication-page");
+  let result = "";
+  try {
+    if (publicationPage && publication) {
+      const { title, text } = publication;
+      const img = publication.img_path;
+      const datePublication = publication.date ? new Date(publication.date) : "";
+      const dateDesc = getDate(datePublication);
+      result = `<div class="publication-page__container _container">
+                  <h1 class="publication-page__title title">${title}</h1>
+                  <img src="${img}" alt="Publication" class="publication-page__img">
+                  <time class="publication-page__date" datetime="${datePublication}">${dateDesc}</time>
+                  <p class="publication-page__text text text_size_xl">${text}</p>
+              </div>`;
+      publicationPage.insertAdjacentHTML("beforeend", result);
+    }
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 async function getPublications() {
   const file = "json/publications.json";
@@ -48,7 +81,9 @@ async function getPublications() {
     });
     if (response.ok) {
       const result = await response.json();
+      const publication = getPublication(result);
       loadPublications(result);
+      loadPublicationPage(publication);
     } else {
       alert("Ошибка!");
     }

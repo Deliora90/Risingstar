@@ -355,7 +355,6 @@ function loadAboutProductFooter(properties, links, instructions) {
   }
 }
 function loadAboutProduct(product) {
-  console.log(product);
   const aboutProductPanel = document.querySelector(".about-product");
   let aboutProduct = "";
   try {

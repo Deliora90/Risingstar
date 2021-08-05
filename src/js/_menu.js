@@ -6,10 +6,10 @@ const isMobile = {
   Windows: () => navigator.userAgent.match(/IEMobile/i),
   any: () => (
     isMobile.Android()
-            || isMobile.BlackBerry()
-            || isMobile.Opera()
-            || isMobile.Windows()
-            || isMobile.iOS()
+    || isMobile.BlackBerry()
+    || isMobile.Opera()
+    || isMobile.Windows()
+    || isMobile.iOS()
   ),
 };
 
@@ -31,7 +31,31 @@ function setActiveMobileMenu() {
   }
 }
 
+function onMenuLinkClick(e) {
+  const menuLink = e.target;
+  if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+    const gotoBlock = document.querySelector(menuLink.dataset.goto);
+    // eslint-disable-next-line no-restricted-globals
+    const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
+    window.scrollTo({
+      top: gotoBlockValue,
+      behavior: "smooth",
+    });
+    e.preventDefault();
+  }
+}
+
+function addSectionsMoving() {
+  const menuLinks = document.querySelectorAll(".menu__link[data-goto]");
+  if (menuLinks && menuLinks.length > 0) {
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", onMenuLinkClick);
+    });
+  }
+}
+
 export {
   setActiveMobileMenu,
   getClassDevice,
+  addSectionsMoving,
 };

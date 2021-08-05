@@ -1,10 +1,11 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import "@babel/polyfill";
 
-import { setActiveMobileMenu } from "./_menu";
+import { setActiveMobileMenu, addSectionsMoving } from "./_menu";
 import { getData } from "./_products";
 import { getPublications } from "./_publications";
 
+addSectionsMoving();
 setActiveMobileMenu();
 getData();
 getPublications();
