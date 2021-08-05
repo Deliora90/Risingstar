@@ -138,6 +138,11 @@ body.lock {
   color: #4B667D;
 }
 
+.text_size_xl {
+  font-size: 24px;
+  line-height: 152.34%;
+}
+
 .text_size_l {
   font-weight: normal;
   font-size: 20px;
@@ -1356,6 +1361,46 @@ body.lock {
   max-width: 80%;
 }
 
+.publication-page {
+  margin: 72px 0px 166px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.publication-page__title {
+  text-align: left;
+  margin-bottom: 47px;
+}
+
+.publication-page__img {
+  max-height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  margin-bottom: 17px;
+}
+
+.publication-page__date {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #4B667D;
+  display: block;
+  text-align: end;
+  margin-bottom: 41px;
+}
+
 @media (min-width: 872.98px) {
   .btn:hover {
     background-color: #009FCA;
@@ -1505,6 +1550,10 @@ body.lock {
 
   .text {
     font-size: 15px;
+  }
+
+  .text_size_xl {
+    font-size: 18px;
   }
 
   .text_size_l {
@@ -1799,6 +1848,22 @@ body.lock {
   .about-product__img-container {
     min-width: 235px;
   }
+
+  .publication-page {
+    margin: 56px 0px 112px 0px;
+  }
+
+  .publication-page__title {
+    margin-bottom: 36px;
+  }
+
+  .publication-page__img {
+    margin-bottom: 13px;
+  }
+
+  .publication-page__date {
+    margin-bottom: 24px;
+  }
 }
 
 @media (max-width: 606.98px) {
@@ -1820,6 +1885,10 @@ body.lock {
 
   .title_size_s {
     font-size: 12px;
+  }
+
+  .text_size_xl {
+    font-size: 16px;
   }
 
   .text_size_l {
@@ -2058,6 +2127,22 @@ body.lock {
 
   .product-properties {
     grid-template: repeat(2, 1fr)/1fr;
+  }
+
+  .publication-page {
+    margin: 26px 0px 104px 0px;
+  }
+
+  .publication-page__title {
+    margin-bottom: 16px;
+  }
+
+  .publication-page__img {
+    margin-bottom: 16px;
+  }
+
+  .publication-page__date {
+    margin-bottom: 36px;
   }
 }
 
