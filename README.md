@@ -32,9 +32,3 @@ You will also see any lint errors in the console
 ```sh
 npm test
 ```
-
-## Available scripts
-
-In the project directory, you can run:
-
-### `npm s`
