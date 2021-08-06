@@ -18,11 +18,8 @@ function getUniqList(data, field) {
   }
   return allListResult;
 }
-function getValue(data) {
-  return (typeof data === "undefined" || data === null) ? "" : data;
-}
+
 export {
   getDate,
   getUniqList,
-  getValue,
 };
