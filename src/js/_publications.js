@@ -66,7 +66,7 @@ function loadPublicationPage(publication) {
                   <time class="publication-page__date" datetime="${datePublication}">${dateDesc}</time>
                   <p class="publication-page__text text text_size_xl">${text}</p>
               </div>`;
-      publicationPage.insertAdjacentHTML("beforeend", result);
+      publicationPage.insertAdjacentHTML("afterbegin", result);
     }
   } catch (err) {
     console.log(err);
