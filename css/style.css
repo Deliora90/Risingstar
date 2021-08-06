@@ -159,14 +159,14 @@ body.lock {
 
 @font-face {
   font-family: 'icons';
-  src: url("../fonts/icons.ttf?gmasup") format("truetype"), url("../fonts/icons.woff?gmasup") format("woff"), url("../fonts/icons.svg?gmasup#icons") format("svg");
+  src: url("../fonts/icons.ttf?a2m8rz") format("truetype"), url("../fonts/icons.woff?a2m8rz") format("woff"), url("../fonts/icons.svg?a2m8rz#icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="_icon-"]::before,
-[class*=" _icon-"]::before {
+[class^="_icon-"],
+[class*=" _icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
   speak: never;
@@ -180,12 +180,16 @@ body.lock {
   -moz-osx-font-smoothing: grayscale;
 }
 
-._icon-download:before {
+._icon-location:before {
+  content: "\e903";
+}
+
+._icon-mail:before {
   content: "\e905";
 }
 
-._icon-come-back:before {
-  content: "\e903";
+._icon-phone:before {
+  content: "\e906";
 }
 
 ._icon-next:before {
@@ -1280,6 +1284,7 @@ body.lock {
 .about-product__tab {
   grid-area: Tab;
   min-height: 393px;
+  margin-bottom: 34px;
 }
 
 .about-product__footer {
@@ -1399,6 +1404,39 @@ body.lock {
   display: block;
   text-align: end;
   margin-bottom: 41px;
+}
+
+.contacts {
+  background-color: #FFF;
+  margin: 50px 0px;
+}
+
+.contacts__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts__title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contacts__item {
+  margin-bottom: 20px;
+}
+
+.contacts__item:last-child {
+  margin: 0;
+}
+
+.contacts__icon {
+  color: #25A8E5;
+  margin-right: 10px;
 }
 
 @media (min-width: 872.98px) {
